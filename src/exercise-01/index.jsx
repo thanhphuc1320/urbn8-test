@@ -52,15 +52,18 @@ const Exercise01 = () => {
             const result = handleSumArray()
             setResult(result)
         }
+        // eslint-disable-next-line 
     },[isSumArr])
 
   return (
     <div className='exercise-01'>
-        <input ref={inputRef} placeholder='Input your Array Here' type='tel' onChange={(e) => setInput(e.target.value)}></input>
-        <button onClick={handleChangeArray}> Add into your array </button>
+        <input className='input' ref={inputRef} placeholder='Input your Array Here' type='tel' onChange={(e) => setInput(e.target.value)}></input>
+        <button className='btn btn-animation' onClick={handleChangeArray}> Add to your array </button>
         <div>{'Your Array [' + arrayIntToShow + ']'}</div>
-        <button onClick={() => setIsSumArr(true)}> Sum Array </button>
-        <button onClick={handleReset}> Reset </button>
+        <div className='btn-container'>
+            <button className='btn btn-animation' onClick={() => setIsSumArr(true)}> Sum Array </button>
+            <button className='btn btn-animation' onClick={handleReset}> Reset </button>
+        </div> 
         <div> Your Result = {result}</div>
     </div>
   )

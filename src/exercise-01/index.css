@@ -1,8 +1,59 @@
 .exercise-01 {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  margin-top: 2rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.btn {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin: 30px;
+  width: 200px;
+  transition: all .3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-animation {
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  background-image: linear-gradient(130deg, #fc00ff 0%, #00dbde 100%);
+}
+
+.btn-animation:hover {
+  background-position: right center; /* change the direction of the change here */
+  box-shadow: 0px 2px 20px 5px #00dbde;
+}
+
+.input {
+  border: none ;  
+  font-size: 1.5em;
+  background: linear-gradient(21deg, #10abff, #1beabd);
+  padding: 3px;
+  display: inline-block;
+  border-radius: 9999em;
+  padding-left: 1em;
+}
+
+.input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 20px 5px #00dbde;
 }
